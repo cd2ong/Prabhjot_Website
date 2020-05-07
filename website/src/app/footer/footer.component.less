@@ -1,0 +1,78 @@
+@import 'colours';
+
+footer{
+  background:@color-primary-4;
+  padding:20em 5%;
+  box-sizing: border-box;
+  display:flex;
+
+  .contact{
+    width:50%;
+
+    > span{
+      display:flex;
+      align-items: center;
+      font-size:14em;
+      line-height:1.5em;
+      color:#fff;
+
+      &::before{
+        content:'';
+        display:block;
+        height:1em;
+        width:1em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right:0.5em;
+      }
+
+      &.phone::before{
+        background-image:url('~/assets/images/phoneicon.png');
+      }
+
+      &.email::before{
+        background-image:url('~/assets/images/mailicon.png');
+      }
+
+    }
+  }
+
+  .social{
+    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a{
+      width:30px;
+      height:30px;
+      display:block;
+
+      &::before{
+        content:"";
+        display:block;
+        position:relative;
+        width:100%;
+        box-sizing: border-box;
+        height:100%;
+      }
+
+      span{
+        visibility: hidden;
+        width:0;
+        height:0;
+        display:block;
+      }
+    }
+
+    .linkedin{
+      &::before{
+        background-image:url('~/assets/images/linkedin.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

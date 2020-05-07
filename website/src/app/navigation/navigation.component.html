@@ -1,0 +1,10 @@
+<div id='header' [ngClass]="{sticky: isSticky, shift: shift}">
+  <div id="logo">
+    <div class="logo-icon"></div>
+    <div class="name">
+      <span>Prabhjot</span>
+      <span>Seehra</span>
+    </div>
+  </div>
+  <menu (open)='triggerShift($event)'></menu>
+</div>

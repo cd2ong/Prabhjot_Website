@@ -1,0 +1,62 @@
+@import 'colours';
+
+#header{
+  float:left;
+  height: 80px;
+  width:100%;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index:500;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position:absolute;
+
+  &.sticky {
+    background: fade(@color-primary-4,80%);
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,.25);
+    position: fixed;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    top: 0;
+    left:0;
+  }
+
+  #logo{
+    display:inline-flex;
+    align-items: center;
+    padding:10em;
+    box-sizing: border-box;
+
+    .logo-icon{
+      background-image: url("~/assets/images/logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 60px;
+      height: 60px;
+    }
+
+    .name{
+      display:flex;
+      flex-direction: column;
+      padding:0 10em;
+      box-sizing: border-box;
+
+      span{
+        font-size:20em;
+        color: #FFF;
+
+        &:last-child{
+          color:#c8c8c8;
+        }
+      }
+    }
+  }
+}
+
+
